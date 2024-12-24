@@ -4,6 +4,7 @@ import { HeroSection } from "app/home/_components/hero-section"
 import { CategoriesSection } from "app/home/_components/categories-section"
 import { FeaturedProductsSection } from "app/home/_components/featured-products-section"
 import { getFeaturedProducts } from "lib/algolia"
+import { ClientHooks } from "../_components/client-hooks"
 
 export const revalidate = 86400
 
@@ -31,6 +32,7 @@ export default async function Homepage(props: { params: Promise<{ bucket: string
       <HeroSection className="-order-1 self-center md:-order-2" title={heroTitles[bucket]} />
       <FeaturedProductsSection products={results} />
       <CategoriesSection />
+      <ClientHooks />
     </div>
   )
 }

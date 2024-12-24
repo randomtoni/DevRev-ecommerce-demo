@@ -48,9 +48,9 @@ export function Footer() {
               <h3 className="text-primary text-lg font-semibold">Support</h3>
               <ul className="space-y-2">
                 <li>
-                  <a href="mailto:contact@blazity.com" className="transition-colors hover:text-orange-500">
+                  <Link href="/contact" className="transition-colors hover:text-orange-500" prefetch={false}>
                     Contact Us
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a href="https://discord.gg/fyWtyNKmfiX" className="transition-colors hover:text-orange-500">

@@ -5,7 +5,7 @@ import withPlugins from "next-compose-plugins"
 /**
  * @type {import('next').NextConfig}
  */
-const config = withPlugins([[withVercelToolbar(), withBundleAnalyzer({ enabled: process.env.ANALYZE === "true" })]], {
+const config = withPlugins([[withVercelToolbar(), withBundleAnalyzer({ enabled: process.env.NEXT_PUBLIC_ANALYZE === "true" })]], {
   reactStrictMode: true,
   logging: {
     fetches: {

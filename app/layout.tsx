@@ -197,7 +197,9 @@ export const metadata: Metadata = {
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>
+      <body
+      >
+        <script type="text/javascript" src="https://plug-platform.devrev.ai/static/plug.js" ></script>
         <Script id="mobileMegaMenuLogic" strategy="lazyOnload">{`${mobileInlineScript}`}</Script>
 
         <NavigationBar items={navigationItems} />

@@ -46,16 +46,16 @@ export function getDemoProductReviews() {
 
 export function isDemoMode(): boolean {
   return (
-    isDemoValue(process.env.SHOPIFY_STOREFRONT_ACCESS_TOKEN) ||
-    isDemoValue(process.env.SHOPIFY_ADMIN_ACCESS_TOKEN) ||
-    isDemoValue(process.env.SHOPIFY_APP_API_SECRET_KEY) ||
-    isDemoValue(process.env.SHOPIFY_STORE_DOMAIN) ||
-    isDemoValue(process.env.ALGOLIA_APP_ID) ||
-    isDemoValue(process.env.ALGOLIA_WRITE_API_KEY) ||
-    isDemoValue(process.env.ALGOLIA_PRODUCTS_INDEX) ||
-    isDemoValue(process.env.ALGOLIA_CATEGORIES_INDEX) ||
-    !process.env.LIVE_URL ||
-    process.env.IS_DEMO_MODE === "true"
+    isDemoValue(process.env.NEXT_PUBLIC_SHOPIFY_STOREFRONT_ACCESS_TOKEN) ||
+    isDemoValue(process.env.NEXT_PUBLIC_SHOPIFY_ADMIN_ACCESS_TOKEN) ||
+    isDemoValue(process.env.NEXT_PUBLIC_SHOPIFY_APP_API_SECRET_KEY) ||
+    isDemoValue(process.env.NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN) ||
+    isDemoValue(process.env.NEXT_PUBLIC_ALGOLIA_APP_ID) ||
+    isDemoValue(process.env.NEXT_PUBLIC_ALGOLIA_WRITE_API_KEY) ||
+    isDemoValue(process.env.NEXT_PUBLIC_ALGOLIA_PRODUCTS_INDEX) ||
+    isDemoValue(process.env.NEXT_PUBLIC_ALGOLIA_CATEGORIES_INDEX) ||
+    !process.env.NEXT_PUBLIC_LIVE_URL ||
+    process.env.NEXT_PUBLIC_IS_DEMO_MODE === "true"
   )
 }
 
