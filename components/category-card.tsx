@@ -18,10 +18,9 @@ export const CategoryCard = ({ handle, image, title, index, className }: Categor
           alt={image?.altText || `${title} category`}
           className="transition-transform group-hover:scale-105"
           style={{
-            objectFit: "contain",
+            objectFit: "contain"
           }}
           fill
-          sizes={undefined}
         />
         <div className="absolute left-0 top-0 z-10 size-full bg-gradient-to-b from-white/90 to-60%" />
       </div>

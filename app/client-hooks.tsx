@@ -2,14 +2,14 @@
 import { useEffect } from "react";
 
 export const ClientHooks = (props) => {
-
+    let initiated = false
     useEffect(() => {
-        if (typeof window == "undefined") return
+        if (initiated || typeof window == "undefined" || !window.plugSDK) return
         window.plugSDK.init({
             app_id: process.env.NEXT_PUBLIC_DEVREV_PLUG_WIDGET_TOKEN,
-            // disable_plug_chat_window: true
         })
-    }, [typeof window == "undefined"]);
+        initiated = true
+    }, [typeof window == "undefined", typeof window == "undefined" ? null : !window.plugSDK ]);
   
     return null
 

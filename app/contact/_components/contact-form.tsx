@@ -1,12 +1,12 @@
 'use client'
 
 import { Button } from "components/ui/button"
-import { useState } from "react"
+import { CSSProperties, useState } from "react"
 import { Input } from "components/ui/input"
 import { Textarea } from "components/ui/textarea"
-import { useRouter, useSearchParams } from 'next/navigation'
+import { useRouter } from 'next/navigation'
 
-const ERROR = {color: "red", marginLeft: 8, fontSize: 15, marginTop: 2}
+const ERROR: CSSProperties = {color: "red", marginLeft: 8, fontSize: 15, marginTop: 2}
 
 export const ContactForm = (props) => {
 

@@ -1,3 +1,4 @@
+import DevUsers from "lib/devrev/devUsers";
 import { NextResponse } from "next/server";
 
 interface CreateTicketFrom {
@@ -10,29 +11,26 @@ export async function POST(req: Request) {
     const data = await req.json() as CreateTicketFrom
     const now = Date.now()
 
-    // Get available user
-    const baseUrl = process.env.VERCEL_URL ? 'https://' + process.env.VERCEL_URL : 'http://localhost:3000'
-    const usersResponse = await fetch(`${baseUrl}/api/devrev/devUsers`, {
-        method: "GET",
-        headers: { "Contant-Type": "application/json" }
-    })
-    const users = await usersResponse.json() as {dev_users: [{display_id: string}]}
+    //* Custom logics for owner selection
+    const users = await DevUsers.getList() as {dev_users: [{display_id: string}]}
+    //* For now we just use the first user that is mine
     let userId = users.dev_users?.length>0 ? users.dev_users[0].display_id : "DEVU-1"
+    // ...
 
-    // create new ticket with data
+    // New ticket data
     const url = "https://api.devrev.ai/works.create"
     const headers = {
-        "Authorization": `Bearer ${process.env.NEXT_PUBLIC_DEVREV_ADMIN_TOKEN}`
+        "Authorization": `Bearer ${process.env.NEXT_PUBLIC_DEVREV_ADMIN_TOKEN}`,
+        "Content-Type": "application/json"
     }
     const body = {
         "type": "ticket",
+        "title": data.name+"_"+now,                                 // title definition can beadjusted
         "owned_by": [ userId ],
-        "title": data.name+"_"+now,
-        // "applies_to_part": "",
+        "applies_to_part": process.env.NEXT_PUBLIC_DEVREV_PART,     // The part is defind as "Ecomerce web"
         // optionals
-        "rev_org": process.env.NEXT_PUBLIC_DEVREV_REV_ORG,
+        "rev_org": process.env.NEXT_PUBLIC_DEVREV_REV_ORG,          // DevRev org
     }
-    console.log(body)
 
     const res = await fetch(url, {
         method: "POST",
@@ -41,12 +39,6 @@ export async function POST(req: Request) {
     })
 
     const resData = await res.json()
-    console.log("submit ticket res", resData)
 
     return NextResponse.json(resData)
-}   
-
-export async function GET(req: Request) {
-    console.log("GETting")
-    return NextResponse.json({"hola": "hola"})
-}   
+}
