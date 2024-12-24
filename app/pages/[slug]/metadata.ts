@@ -10,6 +10,5 @@ export async function generateMetadata(props: { params: Promise<{ slug: string }
     description: page?.seo?.description || page?.bodySummary,
     referrer: "origin-when-cross-origin",
     creator: "Blazity",
-    publisher: "Blazity",
   }
 }

@@ -126,7 +126,7 @@ export function ReviewModal() {
                     <FormLabel>Your Email Address</FormLabel>
                     <FormMessage className="text-xs font-normal text-red-400" />
                     <FormControl>
-                      <Input type="text" placeholder="contact@blazity.com" {...field} />
+                      <Input type="text" placeholder="contact@example.com" {...field} />
                     </FormControl>
                     <FormDescription className="text-xs text-gray-400">We will never share your email with anyone else.</FormDescription>
                   </FormItem>

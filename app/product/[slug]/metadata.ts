@@ -21,7 +21,7 @@ export async function generateMetadata({ params: { slug } }: ProductProps): Prom
 
   return {
     metadataBase: new URL(env.LIVE_URL!),
-    title: `${originalTitle || product?.title} | Blazity`,
+    title: `${originalTitle || product?.title}`,
     description: originalDescription || product?.description,
     generator: "Next.js",
     applicationName: "Next.js",
@@ -32,7 +32,6 @@ export async function generateMetadata({ params: { slug } }: ProductProps): Prom
     alternates: {
       canonical: `/product/${slug}`,
     },
-    publisher: "Blazity",
   }
 }
 

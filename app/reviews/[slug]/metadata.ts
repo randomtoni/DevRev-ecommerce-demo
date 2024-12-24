@@ -16,7 +16,7 @@ export async function generateMetadata(props: ProductReviewsPageProps): Promise<
 
   return {
     metadataBase: new URL(env.LIVE_URL!),
-    title: `${title} Reviews & Feedback | Blazity`,
+    title: `${title} Reviews & Feedback`,
     description: `Discover What People Are Saying About ${title} `,
     generator: "Next.js",
     applicationName: "Next.js",
@@ -27,6 +27,5 @@ export async function generateMetadata(props: ProductReviewsPageProps): Promise<
     alternates: {
       canonical: `/reviews/${slug}`,
     },
-    publisher: "Blazity",
   }
 }

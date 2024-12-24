@@ -170,21 +170,9 @@ const navigationItems: NavItem[] = [
 ]
 
 export const metadata: Metadata = {
-  title: "Next.js Enterprise Commerce | Blazity",
-  description: "AI-FIRST NEXT.JS STOREFRONT FOR COMPOSABLE COMMERCE",
+  title: "DevRev Ecommerce demo",
+  description: "DevRev Ecommerce demo with interactive ticket submission",
   metadataBase: new URL(env.LIVE_URL!),
-  openGraph: {
-    title: "Next.js Enterprise Commerce | Blazity",
-    description: "AI-FIRST NEXT.JS STOREFRONT FOR COMPOSABLE COMMERCE",
-    images: ["/opengraph-image.jpg"],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Next.js Enterprise Commerce | Blazity",
-    description: "AI-FIRST NEXT.JS STOREFRONT FOR COMPOSABLE COMMERCE",
-    creator: "@blazity",
-    images: ["/opengraph-image.jpg"],
-  },
   verification: {
     google: "google",
     yandex: "yandex",

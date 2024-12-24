@@ -63,23 +63,6 @@ export function Footer() {
         </div>
         <div className="border-muted-foreground/20 mt-8 border-t pt-8">
           <div className="flex flex-col items-center justify-between space-y-4 md:flex-row md:space-y-0">
-            <div className="flex space-x-4">
-              <a href="https://www.facebook.com/blazity" className="text-muted-foreground hover:text-primary transition-colors" aria-label="Facebook">
-                <FacebookIcon className="size-6" />
-              </a>
-              <a href="https://twitter.com/blazity" className="text-muted-foreground hover:text-primary transition-colors" aria-label="Twitter">
-                <TwitterIcon className="size-6" />
-              </a>
-              <a href="https://instagram.com/blazitysoftware" className="text-muted-foreground hover:text-primary transition-colors" aria-label="Instagram">
-                <InstagramIcon className="size-6 text-white" />
-              </a>
-              <a href="https://www.youtube.com/channel/UCYDeWaSWiOHn_lUHY-u1VYw/videos" className="text-muted-foreground hover:text-primary transition-colors" aria-label="YouTube">
-                <YoutubeIcon className="size-6 text-white" />
-              </a>
-              <a href="https://www.linkedin.com/company/blazity" className="text-muted-foreground hover:text-primary transition-colors" aria-label="YouTube">
-                <LinkedinIcon className="size-6" />
-              </a>
-            </div>
             <div className="text-sm">© {new Date().getFullYear()} Blazity Enterprise Commerce.</div>
           </div>
           <div className="mt-4 flex flex-col items-center justify-between space-y-4 md:flex-row md:space-y-0">
