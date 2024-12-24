@@ -4,7 +4,7 @@
 Configure PLuG widget in an ecommerce platform and allow users to create support tickets through the CreateTicket API.
 
 ### Screenshot
-![This is an alt text.](https://raw.githubusercontent.com/randomtoni/DevRev-ecommerce-demo/refs/heads/main/public/app-screenshot.png?token=GHSAT0AAAAAAC4FRFXE4NWF5VY3VZTWBBBGZ3LBAMQ "Sample image.")
+![Preview image](https://raw.githubusercontent.com/randomtoni/DevRev-ecommerce-demo/refs/heads/main/public/app-screenshot.png "Preview image")
 
 
 ## Instructions
