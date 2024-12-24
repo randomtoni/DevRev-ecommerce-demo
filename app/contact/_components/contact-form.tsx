@@ -57,7 +57,7 @@ export const ContactForm = (props) => {
       {errors.message && <p style={ERROR}>Enter message</p>}
       <center>
         <Button type="submit" className="mt-8 rounded-md bg-neutral-200 px-6 py-2 text-neutral-900 hover:bg-neutral-300 hover:text-neutral-900 dark:bg-neutral-700 dark:text-neutral-200 dark:hover:bg-neutral-600 dark:hover:text-neutral-200" >
-          Open Ticket
+          Submit Ticket
         </Button>
         {submitError && (
           <p style={{...ERROR, marginTop: 12}} >

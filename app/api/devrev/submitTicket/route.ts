@@ -30,6 +30,7 @@ export async function POST(req: Request) {
         "applies_to_part": process.env.NEXT_PUBLIC_DEVREV_PART,     // The part is defind as "Ecomerce web"
         // optionals
         "rev_org": process.env.NEXT_PUBLIC_DEVREV_REV_ORG,          // DevRev org
+        "body": `Reply to: ${data.email}\n\n${data.message}`,
     }
 
     const res = await fetch(url, {
