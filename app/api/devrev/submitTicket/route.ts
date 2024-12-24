@@ -38,7 +38,7 @@ export async function POST(req: Request) {
         headers: headers
     })
 
-    const resData = await res.json()
+    const resData = await res.json() as {work: {display_id: string, [key: string]: unknown}} 
 
-    return NextResponse.json(resData)
+    return NextResponse.json({ticketId: resData.work.display_id})
 }

@@ -41,7 +41,7 @@ export const ContactForm = (props) => {
       setSubmitError(true)
     } else {
       let search = new URLSearchParams()
-      search.set("ticketId", resData.id)
+      search.set("ticketId", resData.ticketId)
       router.push(`/contact-success?${search}`)
     }
 
