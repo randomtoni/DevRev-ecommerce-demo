@@ -8,9 +8,9 @@ Configure PLuG widget in an ecommerce platform and allow users to create support
 
 
 ## Instructions
-You can initiate support chat via the bottom right cornet button.
+You can initiate support chat via the bottom right corner button.
 
-And submit a support ticket via the "Contact Us" section accesible from the bottom footer.
+And submit a support ticket via the "Contact Us" section accessible from the bottom footer.
 
 ### Demo site
 Visit the [demo site](https://dev-rev-ecommerce-demo.vercel.app/)
